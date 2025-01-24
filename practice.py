@@ -55,3 +55,26 @@ class student:
 s1 = student("Leon mask", 5, 5, 5)
 print(s1.sub1, s1.sub2, s1.sub3)
 print(s1.func())
+
+# practice qus for an account holder for credit and debit his balance using constructor and methods
+
+class account:
+    def __init__(self, bal, acc_nm):
+        self.balance = bal
+        self.account_num = acc_nm
+
+    def credit(self, amount):
+        self.balance += amount
+        print("your balance is ", self.tot_balance())
+
+    def debit(self, amount):
+        self.balance -= amount
+        print("your balance is ", self.tot_balance())
+
+    def tot_balance(self):
+        return self.balance
+
+
+cus1 = account(10000, 1234)
+cus1.credit(230)
+cus1.debit(1000)
